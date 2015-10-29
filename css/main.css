@@ -1,0 +1,14 @@
+.navbar-fixed-top {
+}
+    .navbar-fixed-top div {
+        min-height: 3px;
+    }
+.bg-success {
+    background-color: forestgreen;
+}
+.bg-warning {
+    background-color: yellow;
+}
+.bg-danger {
+    background-color: red;
+}

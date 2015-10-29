@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Left Sidebar</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bower_components/owlcar/owl-carousel/owl.carousel.css"/>
+	<link rel="stylesheet" href="bower_components/animate/animate.min.css"/>
+	<link rel="stylesheet" href="css/sidebar-left.css">
+	<link rel="stylesheet" href="css/text-owl-carousel.css"/>
+	<link rel="stylesheet" href="css/footer.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="full">
+
+	<!--<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header"></div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-arrows-alt"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wifi"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">Second Action</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>-->
+	<nav class="navbar navbar-fixed-top">
+		<div class="row">
+			<div class="col-md-4 bg-success"></div>
+			<div class="col-md-4 bg-warning"></div>
+			<div class="col-md-4 bg-danger"></div>
+		</div>
+	</nav>
+	<aside class="sidebar-left">
+
+		<a class="company-logo" href="#">Logo</a>
+
+		<div class="sidebar-links">
+			<a class="link-blue" href="#"><!--<i class="fa fa-picture-o"></i>-->Photography</a>
+			<a class="link-red" href="#"><!--<i class="fa fa-heart-o"></i>-->Favorites</a>
+			<a class="link-yellow selected" href="#"><!--<i class="fa fa-keyboard-o"></i>-->Projects</a>
+			<a class="link-green" href="#"><!--<i class="fa fa-map-marker"></i>-->Places</a>
+		</div>
+
+	</aside>
+
+	<div class="main-content">
+
+		<div class="owl-carousel">
+			<div>
+				<img src="img/bg1.jpg" alt=""/>
+			</div>
+			<div>
+				<img src="img/bg2.jpg" alt=""/>
+			</div>
+			<div>
+				<img src="img/bg3.jpg" alt=""/>
+			</div>
+			<div>
+				<img src="img/bg4.jpg" alt=""/>
+			</div>
+			<div>
+				<img src="img/bg5.jpg" alt=""/>
+			</div>
+			</div>
+		</div>
+
+		<div class="text-owl-carousel">
+			<div class="text-center">
+				<i style="-webkit-animation-delay: 1s;-moz-animation-delay: 1s;-o-animation-delay: 1s;animation-delay: 1s;" class="fa fa-heart animated bounceInDown"></i>
+				<h2 style="-webkit-animation-delay: 2s;-moz-animation-delay: 2s;-o-animation-delay: 2s;animation-delay: 2s;" class="animated slideInLeft">We are ONYX</h2>
+				<p style="-webkit-animation-delay: 3s;-moz-animation-delay: 3s;-o-animation-delay: 3s;animation-delay: 3s;" class="animated slideInUp">The Best Interior Design Company in Ethiopia</p>
+				<div class="next-icon"></div>
+			</div>
+			<div class="text-center">
+				<h2>Your Internals</h2>
+				<p>If you don't go within, you go without</p>
+				<div class="next-icon"></div>
+			</div>
+		</div>
+
+		<footer class="navbar navbar-fixed-bottom">
+			<div class="container">
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" class="text-muted">&copy; 2015 Onyx Interior Designs</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Designed and Developed by Merhawi Fissehaye +251-973-05 39 99</a></li>
+					</ul>
+				</div>
+				<div class="navbar navbar-right">
+
+				</div>
+			</div>
+			<div class="dog-icon animated bounceInUp">
+				<img src="img/mic.png" alt=""/>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="bower_components/owlcar/owl-carousel/owl.carousel.min.js"></script>
+	<script>
+
+		$(function () {
+
+			var links = $('.sidebar-links > a');
+
+			links.on('click', function () {
+
+				links.removeClass('selected');
+				$(this).addClass('selected');
+
+			});
+
+			$('.owl-carousel').owlCarousel({items: 1, loop: true, autoplay: true, autoplaySpeed: 1500});
+			var textCarousel = $('.text-owl-carousel').owlCarousel({items: 1, mouseDrag: false, loop: true});
+			$('.text-owl-carousel .next-icon').on('click', function() {
+				textCarousel.trigger('next.owl.carousel');
+			})
+		});
+
+	</script>
+
+</body>
+
+</html>

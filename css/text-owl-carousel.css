@@ -1,0 +1,27 @@
+.text-owl-carousel {
+    margin-top: 3px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    padding: 50px;
+    position: relative;
+}
+    .text-owl-carousel h2 {
+        font-size: 120px;
+        font-family: 'Nunito', sans-serif;
+        color: #e0e0e0;
+    }
+    .text-owl-carousel p { font-family: 'Nunito', sans-serif; }
+    .text-owl-carousel p,
+    .text-owl-carousel .fa {
+        font-size: 48px;
+    }
+    .text-owl-carousel .next-icon::after {
+        color: #fff;
+        content: "\00BB";
+        font-size: 72px;
+        position: absolute;
+        right: 50px;
+        top: 120px;
+        font-family: 'Nunito', sans-serif;
+        cursor: pointer;
+    }

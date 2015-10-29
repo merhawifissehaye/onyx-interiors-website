@@ -1,0 +1,22 @@
+footer {
+    background: rgba(0,0,0,0.4);
+    z-index: 11;
+    position: relative;
+    max-height: 50px;
+    overflow: visible;
+}
+    footer .dog-icon {
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+    }
+        footer .dog-icon img {
+            width: 100px;
+        }
+        footer .nav > li > a,
+        footer .nav > li > a:hover,
+        footer .nav > li > a:focus,
+        footer .nav > li > a:visited {
+            color: #fff;
+            background: none;
+        }
